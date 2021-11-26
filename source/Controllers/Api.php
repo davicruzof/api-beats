@@ -17,9 +17,15 @@
                 "nome" => "Admin", 
                 "avatar" => "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
             ];
+            
+            if($data['email'] != "admin@email.com")
+                return $response->withJson(["message" => "Usuario inválido"])->withStatus(200);
+            
+            if($data['senha'] != "12345")
+                return $response->withJson(["message" => "Senha inválida"])->withStatus(200);
 
             if($data['email'] == "admin@email.com" && $data['senha'] == "12345")
-                return $response->withJson(["message" => "Success", "user" => $user])->withStatus(200);
+                return $response->withJson(["message" => "success", "user" => $user])->withStatus(200);
                 
             return $response->withJson(["message" => "Email ou senha inválido"])->withStatus(200);
         }

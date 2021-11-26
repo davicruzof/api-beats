@@ -27,7 +27,8 @@
             return $response->withJson(["message" => "Email ou senha inválido"])->withStatus(200);
         }
 
-        public function products(ResponseInterface $response)
+        public function products(RequestInterface $request, 
+        ResponseInterface $response): ResponseInterface
         {
             return $response->withJson([
                 "data" => "Result",

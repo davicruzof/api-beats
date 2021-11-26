@@ -12,7 +12,7 @@
 
     $app->group('/api', function () use ($app){
         $app->post('/login', Api::class . ":login");
-        $app->post('/products', Api::class . ":products");
+        $app->get('/products', Api::class . ":products");
     });
 
     $app->run();

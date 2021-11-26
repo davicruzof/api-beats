@@ -18,7 +18,7 @@
     $app->group('/products', function () use ($app) {
         $app->get('/list', function (ResponseInterface $response){
             return $response->withJson([
-                "data" => PRODUCTS,
+                "data" => ["12",1],
             ])->withStatus(200);
         });
     });

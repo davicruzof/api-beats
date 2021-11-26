@@ -13,9 +13,6 @@
         {
             $data = $request->getParsedBody();
 
-            if (!filter_var($data["email"], FILTER_VALIDATE_EMAIL))
-                return $response->withJson(["message" => "Email inválido, tente com outro!"])->withStatus(200);
-
             $list_users = USERS;
 
             foreach ($list_users as $user)

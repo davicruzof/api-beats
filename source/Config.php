@@ -1,18 +1,5 @@
 <?php
 
-    define("USERS",[
-        [
-            "name" => "Daniel Gomes",
-            "email" => "daniel@email.com",
-            "password" => "12345"
-        ],
-        [
-            "name" => "Ana Lima",
-            "email" => "ana@email.com",
-            "password" => "12345"
-        ]
-    ]);
-
     define("PRODUCTS",[
         [
             "name" => "Ank Headphone",

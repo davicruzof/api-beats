@@ -30,7 +30,7 @@
         public function products(ResponseInterface $response): ResponseInterface
         {
             return $response->withJson([
-                "data" => PRODUCTS,
+                "data" => "Result",
             ])->withStatus(200);
         }
     }

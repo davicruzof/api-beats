@@ -6,9 +6,10 @@
     use Psr\Http\Message\RequestInterface;
     use Psr\Http\Message\ResponseInterface;
 
-    final class User extends DataLayer
+    final class Api extends DataLayer
     {
-        public function login(RequestInterface $request, ResponseInterface $response): ResponseInterface
+        public function login(RequestInterface $request, 
+        ResponseInterface $response): ResponseInterface
         {
             $data = $request->getParsedBody();
 
@@ -24,5 +25,12 @@
             }
 
             return $response->withJson(["message" => "Email ou senha inválido"])->withStatus(200);
+        }
+
+        public function products(ResponseInterface $response): ResponseInterface
+        {
+            return $response->withJson([
+                "data" => PRODUCTS,
+            ])->withStatus(200);
         }
     }

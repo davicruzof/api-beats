@@ -31,7 +31,7 @@
         ResponseInterface $response): ResponseInterface
         {
             return $response->withJson([
-                "data" => "Result",
+                "data" => PRODUCTS,
             ])->withStatus(200);
         }
     }

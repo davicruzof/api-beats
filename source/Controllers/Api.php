@@ -19,11 +19,8 @@
             ];
 
             if($data['email'] == "admin@email.com" && $data['senha'] == "12345")
-                return $response->withJson(
-                ["message" => "Success", 
-                 "user" => $user
-                )->withStatus(200);
-        
+                return $response->withJson(["message" => "Success", "user" => $user)->withStatus(200);
+                
             return $response->withJson(["message" => "Email ou senha inválido"])->withStatus(200);
         }
 

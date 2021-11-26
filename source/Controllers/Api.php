@@ -6,7 +6,7 @@
     use Psr\Http\Message\RequestInterface;
     use Psr\Http\Message\ResponseInterface;
 
-    final class Api extends DataLayer
+    final class Api
     {
         public function login(RequestInterface $request, 
         ResponseInterface $response): ResponseInterface

@@ -13,14 +13,9 @@
         {
             $data = $request->getParsedBody();
 
-            $list_users = USERS;
-
-            foreach ($list_users as $user)
-            {
-                if($data['email'] == $user->email && $data['senha'] == $user->senha)
-                    return $response->withJson(["message" => "Success", "user" => $user])->withStatus(200);
-            }
-
+            if($data['email'] == "admin@email" && $data['senha'] == "12345")
+                return $response->withJson(["message" => "Success", "user" => $user])->withStatus(200);
+        
             return $response->withJson(["message" => "Email ou senha inválido"])->withStatus(200);
         }
 
